@@ -21,3 +21,5 @@ override.tf.json
 
 # Include plugin cache directory
 .terraform.lock.hcl
+
+*.key
