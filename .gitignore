@@ -23,4 +23,13 @@ override.tf.json
 .terraform.lock.hcl
 
 *.key
-*.key
+
+# Ignore aws/dist directory at any level
+**/aws/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# macOS
+.DS_Store
