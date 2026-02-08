@@ -1,0 +1,15 @@
+provider "aws" {
+  region = "ap-southeast-1"
+}
+
+module "cluster" {
+  source  = "brikis98/devops/book//modules/eks-cluster"
+  version = "1.0.0"
+
+  name        = "eks-sample"        
+  eks_version = "1.32"              
+
+  instance_type        = "t3.micro" 
+  min_worker_nodes     = 3          
+  max_worker_nodes     = 10         
+}
