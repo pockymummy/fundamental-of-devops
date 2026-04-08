@@ -1,0 +1,21 @@
+{
+  "name": "sample-app",
+  "version": "0.0.1",
+  "description": "Sample app for 'Fundamentals of DevOps and Software Delivery'",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "dockerize": "./build-docker-image.sh",
+    "test": "jest --verbose --coverage"
+  },
+  "author": "Yevgeniy Brikman",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2"
+  }
+}
