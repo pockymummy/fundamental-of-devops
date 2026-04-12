@@ -21,9 +21,8 @@ module "function" {
 }
 
 resource "aws_lambda_permission" "allow_public_invoke" {
-  statement_id           = "FunctionURLAllowPublicAccess"
-  action                 = "lambda:InvokeFunctionUrl"
-  function_name          = module.function.function_name
-  principal              = "*"
-  function_url_auth_type = "NONE"
+  statement_id  = "FunctionURLAllowPublicAccess"
+  action        = "lambda:InvokeFunctionUrl"
+  function_name = module.function.function_name
+  principal     = "*"
 }
