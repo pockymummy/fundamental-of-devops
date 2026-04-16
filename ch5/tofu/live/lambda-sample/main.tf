@@ -6,7 +6,7 @@ module "function" {
   source  = "brikis98/devops/book//modules/lambda"
   version = "1.0.0"
 
-  name        = "lambda-sample"      
+  name        = var.name      
   src_dir     = "${path.module}/src" 
   runtime     = "nodejs20.x"         
   handler     = "index.handler"      
@@ -21,7 +21,7 @@ module "function" {
 }
 
 resource "aws_lambda_permission" "allow_public_invoke_url" {
-  statement_id           = "FunctionURLAllowPublicAccess"
+  statement_id           = "FunctionURLAllowPublicAccess2"
   action                 = "lambda:InvokeFunctionUrl"
   function_name          = module.function.function_name
   principal              = "*"
@@ -29,7 +29,7 @@ resource "aws_lambda_permission" "allow_public_invoke_url" {
 }
 
 resource "aws_lambda_permission" "allow_public_invoke_function" {
-  statement_id           = "FunctionAllowPublicAccess"
+  statement_id           = "FunctionAllowPublicAccess3"
   action                 = "lambda:InvokeFunction"
   function_name          = module.function.function_name
   principal              = "*"
