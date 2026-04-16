@@ -6,7 +6,7 @@ module "function" {
   source  = "brikis98/devops/book//modules/lambda"
   version = "1.0.0"
 
-  name        = "lambda-sample"      
+  name        = var.name      
   src_dir     = "${path.module}/src" 
   runtime     = "nodejs20.x"         
   handler     = "index.handler"      
